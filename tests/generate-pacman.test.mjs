@@ -65,4 +65,3 @@ test("live mode requires both username and token", async () => {
     /GITHUB_TOKEN/
   );
 });
-

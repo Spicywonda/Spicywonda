@@ -60,4 +60,3 @@ jobs:
           git -C "$publish_dir" commit -m "chore: update Pac-Man contribution graph"
           git -C "$publish_dir" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git -C "$publish_dir" push --force origin HEAD:output
-

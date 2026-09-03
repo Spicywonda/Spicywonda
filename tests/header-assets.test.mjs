@@ -16,4 +16,3 @@ for (const file of files) {
     assert.ok(Buffer.byteLength(svg) < 40_000);
   });
 }
-

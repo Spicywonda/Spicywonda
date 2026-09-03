@@ -57,4 +57,3 @@ Open-source developer focused on practical desktop and gaming utilities. The rep
 </picture>
 
 <p align="center"><a href="https://github.com/Spicywonda?tab=repositories">All repositories</a></p>
-

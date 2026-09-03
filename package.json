@@ -7,4 +7,3 @@
     "generate:pacman": "node scripts/generate-pacman.mjs"
   }
 }
-

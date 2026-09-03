@@ -33,4 +33,3 @@ test("README has no private contact or fragile profile widgets", async () => {
     "https://raw.githubusercontent.com/Spicywonda/Spicywonda/output/pacman-contribution-graph.svg"
   ]);
 });
-

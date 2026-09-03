@@ -26,4 +26,3 @@ test("workflow pins its only action and publishes only expected SVGs", async () 
   assert.match(yaml, /HEAD:output/);
   assert.doesNotMatch(yaml, /abozanona|crazy-max|@main|@master/);
 });
-

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Spicywonda</title>
+  <desc id="desc">Professional slate banner displaying the Spicywonda alias.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e7edf4"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b7791f"/>
+      <stop offset=".55" stop-color="#2f6fa8"/>
+      <stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#334155" stroke-width="1" opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="300" rx="24" fill="url(#grid)"/>
+  <rect x="72" y="76" width="7" height="112" rx="3.5" fill="#b7791f"/>
+  <path d="M72 218H1128" stroke="url(#rule)" stroke-width="2"/>
+  <circle cx="1088" cy="82" r="6" fill="#2f6fa8"/>
+  <circle cx="1110" cy="82" r="6" fill="#b7791f"/>
+  <circle cx="1132" cy="82" r="6" fill="#cbd5e1"/>
+  <text x="112" y="179" fill="#172033" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="84" font-weight="700" letter-spacing="8">SPICYWONDA</text>
+</svg>
+

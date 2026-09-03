@@ -1,0 +1,63 @@
+name: Generate Pac-Man contribution graph
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/pacman.yml"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+
+permissions: {}
+
+concurrency:
+  group: pacman-output
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out profile source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Run offline tests
+        run: npm test
+
+      - name: Generate contribution SVGs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: node scripts/generate-pacman.mjs --output-dir dist
+
+      - name: Validate contribution SVGs
+        run: node scripts/generate-pacman.mjs --validate-dir dist
+
+      - name: Publish disposable output branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          publish_dir="$(mktemp -d)"
+          cp dist/pacman-contribution-graph.svg "$publish_dir/"
+          cp dist/pacman-contribution-graph-dark.svg "$publish_dir/"
+          git -C "$publish_dir" init --initial-branch=output
+          git -C "$publish_dir" config user.name "github-actions[bot]"
+          git -C "$publish_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$publish_dir" add pacman-contribution-graph.svg pacman-contribution-graph-dark.svg
+          git -C "$publish_dir" commit -m "chore: update Pac-Man contribution graph"
+          git -C "$publish_dir" remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C "$publish_dir" push --force origin HEAD:output
+

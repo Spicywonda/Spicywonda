@@ -1,0 +1,30 @@
+{
+  "totalContributions": 25,
+  "weeks": [
+    {
+      "firstDay": "2026-08-16",
+      "contributionDays": [
+        {"date":"2026-08-16","weekday":0,"contributionCount":0,"contributionLevel":"NONE"},
+        {"date":"2026-08-17","weekday":1,"contributionCount":1,"contributionLevel":"FIRST_QUARTILE"},
+        {"date":"2026-08-18","weekday":2,"contributionCount":2,"contributionLevel":"SECOND_QUARTILE"},
+        {"date":"2026-08-19","weekday":3,"contributionCount":4,"contributionLevel":"THIRD_QUARTILE"},
+        {"date":"2026-08-20","weekday":4,"contributionCount":7,"contributionLevel":"FOURTH_QUARTILE"},
+        {"date":"2026-08-21","weekday":5,"contributionCount":0,"contributionLevel":"NONE"},
+        {"date":"2026-08-22","weekday":6,"contributionCount":1,"contributionLevel":"FIRST_QUARTILE"}
+      ]
+    },
+    {
+      "firstDay": "2026-08-23",
+      "contributionDays": [
+        {"date":"2026-08-23","weekday":0,"contributionCount":3,"contributionLevel":"SECOND_QUARTILE"},
+        {"date":"2026-08-24","weekday":1,"contributionCount":0,"contributionLevel":"NONE"},
+        {"date":"2026-08-25","weekday":2,"contributionCount":1,"contributionLevel":"FIRST_QUARTILE"},
+        {"date":"2026-08-26","weekday":3,"contributionCount":2,"contributionLevel":"SECOND_QUARTILE"},
+        {"date":"2026-08-27","weekday":4,"contributionCount":1,"contributionLevel":"FIRST_QUARTILE"},
+        {"date":"2026-08-28","weekday":5,"contributionCount":2,"contributionLevel":"SECOND_QUARTILE"},
+        {"date":"2026-08-29","weekday":6,"contributionCount":1,"contributionLevel":"FIRST_QUARTILE"}
+      ]
+    }
+  ]
+}
+
